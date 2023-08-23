@@ -132,7 +132,11 @@ public class KakaoAPI {
         System.out.println("**약국 검색 결과**");
 
         for (PlaceInformation place : placeList) {
-            System.out.println(place.printPlaceInfo());
+            System.out.println("장소 URL(지도 위치): " + place.getPlace_url());
+            System.out.println("상호명: " + place.getPlace_name());
+            System.out.println("주소: " + place.getAddress_name());
+            System.out.println("전화번호: " + place.getPhone());
+            System.out.println("거리(km): " + (Integer.parseInt(place.getDistance())/1000d) +"km");
             System.out.println("--------------------------------");
         }
 
